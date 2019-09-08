@@ -1,5 +1,6 @@
 [package]
-name = "{{project-name}}"
+# name = "{{project-name}}"
+name = "rust-mod-template"
 version = "0.1.0"
 authors = ["{{authors}}"]
 edition = "2018"
@@ -8,7 +9,7 @@ edition = "2018"
 crate-type = ["cdylib"]
 
 [dependencies]
-sapiens-rs = "1.0.0"
+sapiens-rs = { git = "https://github.com/DethRaid/sapiens-rs.git" }
 
 [features]
 default = []
@@ -18,3 +19,5 @@ climate = []
 height = []
 particles = []
 rainfall = []
+
+all = ["biome", "climate", "height", "particles", "rainfall", "default"]
